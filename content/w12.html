@@ -210,7 +210,27 @@ todays_menu.pop(side_dish_index) #今日菜單.移除字串中的元素(side_dis
 print (todays_menu) #列印今日菜單
 todays_menu.insert(side_dish_index, "唐揚雞") #今日菜單.在字串中插入(side_dish_index, "fries")   這裡意思是加入薯條
 print (todays_menu) #列印今日菜單</pre>
-<p></p><br />w11 << <a href='w11.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
+<p><em>第六題：切片取值</em></p>
+<p><em><span>說明：</span><span>[star:end:step][起點:終點:步長]</span></em></p>
+<p><em><span>Q6範例程式：<a href="https://mdecp2024.github.io/hw-41323204/content/Brython.html?src=https://gist.githubusercontent.com/41323204/df92358b984c289ab1758215f9496a12/raw/006bdd940f51bd1a9c6e740468deb44380671e5d/hw12-6.py">城市</a></span></em></p>
+<pre class="brush:py;auto-links:false;toolbar:false custom-cursor-default-hover" contenteditable="false">cities = ["San Diego", "Prague", "Cape Town", "Tokyo", "Melbourne"] #變數城市=以下字串
+print (cities) #列印 (城市)
+print (cities[1]) #列印 (城市 [1])    由於程式是由0開始計算 所以第一個會是Prague
+print (cities[1:4]) #列印 (城市 [1:4]) 列印出來會是['Prague', 'Cape Town', 'Tokyo'] 由於執行到4就停止了所以只有三個
+print (cities[1:4:2]) #列印 城市 [1:4:2]) 列印出來會是['Prague', 'Tokyo'] 因為步數設定為2 程式執行會把1~4由左至右一次跳過兩個進行輸出
+print (cities[0:3]) #列印 城市 [0:3]) 列印出來會是['San Diego', 'Prague', 'Cape Town'] 這次是從0開始計算
+print (cities[:3]) #列印 城市 [:3]) 列印出來會是['San Diego', 'Prague', 'Cape Town'] 由於未輸入數值,默認為0
+print (cities[2:5]) #列印 城市 [2:5]) 列印出來會是 ['Cape Town', 'Tokyo', 'Melbourne'] 從2~5
+print (cities[2:]) #列印 城市 [2:]) 列印出來會是 ['Cape Town', 'Tokyo', 'Melbourne'] 如果結束未輸入默認為列表的長度之值
+print (cities[0:5:2]) #列印 城市 [0:5:2]) 列印出來會是['San Diego', 'Cape Town', 'Melbourne'] 程式執行會把0~5由左至右一次跳過兩個進行輸出
+print (cities[::2]) #列印 城市 [::2]) 列印出來會是 ['San Diego', 'Cape Town', 'Melbourne'] 未輸入開始會默認0終點會默認列表的長度
+print (cities[4]) #列印 城市 [4]) 列印出來會是 Melbourne 
+print (cities[-1]) #列印 城市 [-1]) 列印出來會是 Melbourne -值會倒退計算 "含前不含後"
+print (cities[-4:-1]) #列印 城市 [-4:-1]) 列印出來會是 ['Prague', 'Cape Town', 'Tokyo']
+cities[3:0:-1] #這個是切片操作 如果列印出來會是 ['Tokyo', 'Cape Town', 'Prague']
+cities[-2:-5:-1] #這個是切片操作 如果列印出來會是 ['Tokyo', 'Cape Town', 'Prague']
+print (cities[::-1]) #列印 城市 [::-1]) ['Melbourne', 'Tokyo', 'Cape Town', 'Prague', 'San Diego']</pre>
+<p><em><span></span></em></p><br />w11 << <a href='w11.html'>Previous</a> <a href='HW 2.html'>Next</a> >> HW 2</div>
         
     <!-- footer -->
       <div class="container">
